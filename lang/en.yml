@@ -1,0 +1,73 @@
+en:
+  widgets_weather:
+    TITLE: "Forecast weather"
+    CMSTITLE: "Forecast weather"
+    DESCRIPTION: "Displays forecast weather from weather.com"
+    YES: "Yes"
+    NO: "No"
+    SHOW: "Show"
+    HIDE: "Hide"
+    HOUR: "hour"
+    FORECASTDAYS: "Forecast days"
+    LASTUP: 'Updated'
+    UNIT: "Unit"
+    UM: "Meters"
+    US: "US Standard"
+    FEELSLIKE: 'Feels like'
+    REGION: 'Region'
+    TEMPERATURE: 'Temperature'
+    RAINCHANCE: 'Rain chance'
+    BAROMETER: 'Barometer'
+    DEWPOINT: 'Dew. point'
+    HUMIDITY: 'Humidity'
+    VISIBILITY: 'Visibility'
+    WIND: 'Wind'
+    WINDD: 'Direction'
+    WINDS: 'Speed'
+    GUST: 'gust'
+    _N: 'N'
+    _NNE: 'NNE'
+    _NE: 'NE'
+    _ENE: 'ENE'
+    _E: 'E'
+    _ESE: 'ESE'
+    _SE: 'SE'
+    _SSE: 'SSE'
+    _S: 'S'
+    _SSW: 'SSW'
+    _SW: 'SW'
+    _WSW: 'WSW'
+    _W: 'W'
+    _WNW: 'WNW'
+    _NW: 'NW'
+    _NNW: 'NNW'
+    _VAR: 'Various'
+    UVILOW: 'Low'
+    UVIHIGH: 'High'
+    UVIMODERATE: 'Moderate'
+    MAX: 'Max'
+    MIN: 'Min'
+    LOW: 'Low'
+    HIGH: 'High'
+    CONDITIONS: 'Conditions'
+    REAL: 'Real'
+    CALM: 'Various'
+    FAIR: 'Fair'
+    CLOUDY: 'Cloudy'
+    MODERATE: 'Moderate'
+    FALLING: 'falling'
+    STEADY: 'steady'
+    RISING: ''rising'
+    UVINDEX: 'UV Index'
+    SUNRISE: 'Sunrise'
+    SUNSET: 'Sunset'
+    LICENSEKEY: "License Key"
+    LICENSEKEYDESCRIPTION: "License key from www.weather.com"
+    PARTNERID: "Partner ID"
+    PARTNERIDDESCRIPTION: "Partner ID from www.weather.com"
+    CITYID: "City ID"
+    CITYIDDESCRIPTION: "City, location ID from www.weather.com, e. g.: LOXX0003 (Kosice, Slovakia)"
+    METRICUNIT: "Metric unit"
+    SELECTICON: "Select icon"
+    ICONS: "Icons"
+    SIZEICON: "Icon size (pixels)"

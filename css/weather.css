@@ -1,0 +1,81 @@
+table.weather {
+	font-size: 12px;
+	line-height: normal;
+	border-collapse: collapse;
+	border:none;
+	border-spacing: 0;
+	width: auto;/*100%;*/
+}
+table.weather td {
+	vertical-align: top;
+	text-align: left;
+	background: #fff;
+	border: none;
+}
+.weather_td_left {
+	padding: 0 5px 0 0;
+	white-space: nowrap;
+	font-weight: bold;
+}
+.weather_td_right {
+}
+span.weather_temp_header {
+	font-size:220%;
+	font-weight:bold;
+}
+span.weather_feelslike {
+	font-size:100%;
+}
+div.weather_center {
+	text-align: center;
+}
+div.weather_center_small {
+	text-align: center;
+	font-size: 75%
+}
+img.weatherIconLarge {
+	width:64px;
+	height: 64px;
+	border: none;
+}
+img.weatherIconSmall {
+	width:48px;
+	height: 48px;
+	border: none;
+}
+hr.weather {
+  margin: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #ffffff;
+}
+.accordion {
+  margin-bottom:5px;
+}
+.accordion-group {
+  margin-bottom: 2px;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+.accordion-heading {
+  border-bottom: 0;
+}
+.accordion-heading .accordion-toggle {
+  display: block;
+  padding: 2px;
+}
+.accordion-toggle {
+  cursor: pointer;
+}
+.accordion-heading a {
+  color: #000;
+  font-size: 90%;
+  font-weight: bold;
+  text-decoration: none;
+}
+.accordion-inner {
+  padding: 2px;
+  border: none;
+  border-top: 1px solid #e5e5e5;
+}

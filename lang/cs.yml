@@ -1,0 +1,73 @@
+cs:
+  widgets_weather:
+    TITLE: "Předpověď počasí"
+    CMSTITLE: "Předpověď počasí"
+    DESCRIPTION: "Zobrazí předpověď počasí z weather.com"
+    YES: "Ano"
+    NO: "Ne"
+    SHOW: "Ukázat"
+    HIDE: "Skrýt"
+    HOUR: "hod."
+    FORECASTDAYS: "Předpověď dní"
+    LASTUP: 'Aktualizováno'
+    UNIT: "Jednotka"
+    UM: "Metry"
+    US: "US standard"
+    FEELSLIKE: 'Vnímáno jako'
+    REGION: 'Oblast'
+    TEMPERATURE: 'Teplota'
+    RAINCHANCE: 'Možnost deště'
+    BAROMETER: 'Tlak'
+    DEWPOINT: 'Rosný bod'
+    HUMIDITY: 'Vlhkost'
+    VISIBILITY: 'Viditelnost'
+    WIND: 'Vítr'
+    WINDD: 'Směr'
+    WINDS: 'Rychlost'
+    GUST: 'nárazový'
+    _N: 'S'
+    _NNE: 'SSV'
+    _NE: 'SV'
+    _ENE: 'VSV'
+    _E: 'V'
+    _ESE: 'VJV'
+    _SE: 'JV'
+    _SSE: 'JJV'
+    _S: 'J'
+    _SSW: 'JJZ'
+    _SW: 'JZ'
+    _WSW: 'ZJZ'
+    _W: 'Z'
+    _WNW: 'ZSZ'
+    _NW: 'SZ'
+    _NNW: 'SSZ'
+    _VAR: 'proměnlivý'
+    UVILOW: 'Nízký'
+    UVIHIGH: 'Vysoký'
+    UVIMODERATE: 'Mírný'
+    MAX: 'Max'
+    MIN: 'Min'
+    LOW: 'Nejnižší'
+    HIGH: 'Nejvyšší'
+    CONDITIONS: 'Podmínky'
+    REAL: 'Ovzduší'
+    CALM: 'proměnlivý'
+    FAIR: 'Jasno'
+    CLOUDY: 'Oblačno'
+    MODERATE: 'mírný'
+    FALLING: 'klesající'
+    STEADY: 'stálý'
+    RISING: 'stoupající'
+    UVINDEX: 'UV Index'
+    SUNRISE: 'Východ slunce'
+    SUNSET: 'Západ slunce'
+    LICENSEKEY: "Licenční klíč"
+    LICENSEKEYDESCRIPTION: "Licenční klíč z www.weather.com"
+    PARTNERID: "Partner ID"
+    PARTNERIDDESCRIPTION: "Partner ID z www.weather.com"
+    CITYID: "Město ID"
+    CITYIDDESCRIPTION: "Město, oblast ID z www.weather.com, e. g.: LOXX0003 (Košice, Slovakia)"
+    METRICUNIT: "Metrická jednotka"
+    SELECTICON: "Vyberte ikonu"
+    ICONS: "Ikony"
+    SIZEICON: "Velikost ikon (pixely)"
