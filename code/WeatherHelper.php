@@ -182,7 +182,8 @@ class WeatherHelper {
 			$WS = $this->FORECAST['DAYF'][$fd]['d']['WIND']['S'];
 			$WG = $this->FORECAST['DAYF'][$fd]['d']['WIND']['GUST'];
 		}
-		if (preg_match("/(\\d+)/i",$WS)) $wind[] = (preg_match("/(m)/i",$this->Unit) ? $WS . ' km/h' : $this->convert_MilesMeters('', $WS ) . ' mph');
+		$wind = array();
+		if (!empty($WS) && preg_match("/(\\d+)/i",$WS)) $wind[] = (preg_match("/(m)/i",$this->Unit) ? $WS . ' km/h' : $this->convert_MilesMeters('', $WS ) . ' mph');
 		if (!empty($WG) && $WG != 'N/A') $wind[] = _t('widgets_weather.GUST','gust') . ' ' . (preg_match("/(m)/i",$this->Unit) ? $WG . ' km/h' : $this->convert_MilesMeters('', $WG) . ' mph');
 		return implode('<br />', $wind);
 	}
