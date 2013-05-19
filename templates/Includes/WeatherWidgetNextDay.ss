@@ -5,9 +5,7 @@
 			<td>
 			<% if ShowIcon %>
 			<div class="weather_center">
-				<% with DataIcon %>
-				<img src="$UrlIcon" alt="$Alt.XML" title="$Title.XML" class="$ImgCssClass" />
-				<% end_with %>
+				<img src="$DataIcon.UrlIcon" alt="$DataIcon.Alt.XML" title="$DataIcon.Title.XML" class="$DataIcon.ImgCssClass" />
 			</div>
 			<% end_if %>
 			</td>

@@ -109,7 +109,7 @@ class WeatherWidget extends Widget {
 	}
 	private $weather = null;
 	public function addMore() {
-		return ((int )$this->ForeDays > 1 ? true : false);
+		return ((int) $this->ForeDays > 1 ? true : false);
 	}
 	public function getWeatherCurrentDay() {
 		if ($this->weather == null) {
@@ -159,12 +159,12 @@ class WeatherWidget extends Widget {
 					"Sunrise" => $this->weather->getSun(0,"r"),
 					"Sunset" => $this->weather->getSun(0,"s"),
 					"Conditions" => $this->weather->getConditions(0),
-					"DataIcon" => new ArrayData(array(
+					"DataIcon" => array(
 						"UrlIcon" => $this->weather->getUrlIcon(0,WIDGETS_WEATHER_ICONS_URL . '/' . $this->DirIcon, $this->SizeIcon),
 						"Alt" => $this->weather->getConditions(0),
 						"Title" => $this->weather->getConditions(0),
 						"ImgCssClass" => ($this->SizeIcon == 48 ? 'weatherIconSmall' : 'weatherIconLarge')
-					))
+					)
 				))
 			)));
 		}
@@ -201,12 +201,12 @@ class WeatherWidget extends Widget {
 						"Sunrise" => $this->weather->getSun($i,"r"),
 						"Sunset" => $this->weather->getSun($i,"s"),
 						"Conditions" => $this->weather->getConditions($i),
-						"DataIcon" => new ArrayData(array(
+						"DataIcon" => array(
 							"UrlIcon" => $this->weather->getUrlIcon($i,WIDGETS_WEATHER_ICONS_URL . '/' . $this->DirIcon, $this->SizeIcon),
 							"Alt" => $this->weather->getConditions($i),
 							"Title" => $this->weather->getConditions($i),
 							"ImgCssClass" => ($this->SizeIcon == 48 ? 'weatherIconSmall' : 'weatherIconLarge')
-						))
+						)
 					))
 				)));
 			}

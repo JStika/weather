@@ -13,9 +13,7 @@
 			<td>
 			<% if ShowIcon %>
 			<div class="weather_center">
-				<% with DataIcon %>
-				<img src="$UrlIcon" alt="$Alt.XML" title="$Title.XML" class="$ImgCssClass" />
-				<% end_with %>
+				<img src="$DataIcon.UrlIcon" alt="$DataIcon.Alt.XML" title="$DataIcon.Title.XML" class="$DataIcon.ImgCssClass" />
 			</div>
 			<% end_if %>
 			</td>
@@ -87,7 +85,7 @@
 		<% if ShowWind %>
 		<tr>
 			<td class="weather_td_left"><% _t('widgets_weather.WIND','Wind') %>:</td>
-			<td class="weather_td_right">$Wind,<br /><% _t('widgets_weather.WINDD','Direction') %>: $Direction</td>
+			<td class="weather_td_right">$Wind<br /><% _t('widgets_weather.WINDD','Direction') %>: $Direction</td>
 		</tr>
 		<% end_if %>
 		<% if ShowUVI %>
