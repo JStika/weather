@@ -107,6 +107,8 @@ class WeatherWidget extends Widget {
 	public function Description() {
 		return _t('widgets_weather.DESCRIPTION', Object::get_static($this->class, 'description'));
 	}
+}
+class WeatherWidget_Controller extends Widget_Controller {
 	private $weather = null;
 	public function addMore() {
 		return ((int) $this->ForeDays > 1 ? true : false);
@@ -212,5 +214,5 @@ class WeatherWidget extends Widget {
 			}
 		}
 		return $output;
-	}
+	}	
 }
