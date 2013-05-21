@@ -16,7 +16,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td class="weather_td_left"><% _t('WeatherPage.RAINCHANCE','Rain chance') %>:</td>
+			<td class="weather_td_left"><% _t('widgets_weather.RAINCHANCE','Rain chance') %>:</td>
 			<td class="weather_td_right">$RainChance</td>
 		</tr>
 		<% if ShowTemp %>
