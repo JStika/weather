@@ -76,6 +76,6 @@ hr.weather {
 }
 .accordion-inner {
   padding: 2px;
-  border: none;
+  /*border: none;*/
   border-top: 1px solid #e5e5e5;
 }
