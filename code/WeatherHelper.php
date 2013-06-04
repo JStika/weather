@@ -69,7 +69,7 @@ class WeatherHelper {
 					$start_level++;
 				}
 				$php_stmt .= '[$xml_elem[\'tag\']] = $xml_elem[\'value\'];';
-				eval ($php_stmt);
+				@eval($php_stmt);
 			}
 		}
 		return $params_array['2.0'];
@@ -137,17 +137,17 @@ class WeatherHelper {
 		return $city . ',' . $country;
 	}
 	public function getRainChance($fd = 0) {
-		return $this->FORECAST['DAYF'][$fd]['d']['PPCP'] . ' %';			
+		return (int) $this->FORECAST['DAYF'][$fd]['d']['PPCP'] . ' %';			
 	}
 	public function getTemp($fd = 0, $lowhigh = null) {
 		if ($lowhigh == null) {
-			$t = (string) $this->FORECAST['CC']['TMP'];
+			$t = (int) $this->FORECAST['CC']['TMP'];
 		}
 		if ($lowhigh == strtolower('h')) {
-			$t = (string) $this->FORECAST['DAYF'][$fd]['HI'];
+			$t = (int) $this->FORECAST['DAYF'][$fd]['HI'];
 		}
 		if ($lowhigh == strtolower('l')) {
-			$t = (string) $this->FORECAST['DAYF'][$fd]['LOW'];
+			$t = (int) $this->FORECAST['DAYF'][$fd]['LOW'];
 		}
 		return ($this->Unit == "m" ? $t . ' &deg;C' : $this->convert_FahrenheitCelsius('', $t) . ' &deg;F');
 	}
@@ -174,6 +174,7 @@ class WeatherHelper {
 		return ($this->Unit == "m" ? (int) $this->FORECAST['CC']['VIS'] . ' km' : $this->convert_MilesMeters('', (int) $this->FORECAST['CC']['VIS'] ) . ' miles');
 	}
 	public function getWind($fd = 0) {
+        $wind = array();
 		if ($fd == 0) {
 			$WS = $this->FORECAST['CC']['WIND']['S'];
 			$WG = $this->FORECAST['CC']['WIND']['GUST'];
@@ -183,8 +184,16 @@ class WeatherHelper {
 			$WG = $this->FORECAST['DAYF'][$fd]['d']['WIND']['GUST'];
 		}
 		$wind = array();
-		if (!empty($WS) && preg_match("/(\\d+)/i",$WS)) $wind[] = (preg_match("/(m)/i",$this->Unit) ? $WS . ' km/h' : $this->convert_MilesMeters('', $WS ) . ' mph');
-		if (!empty($WG) && $WG != 'N/A') $wind[] = _t('widgets_weather.GUST','gust') . ' ' . (preg_match("/(m)/i",$this->Unit) ? $WG . ' km/h' : $this->convert_MilesMeters('', $WG) . ' mph');
+        if (!empty($WS)) {
+            if (preg_match("/(\\d+)/i",$WS)) {
+                $wind[] = (preg_match("/(m)/i",$this->Unit) ? $WS . ' km/h' : $this->convert_MilesMeters('', $WS ) . ' mph');
+            }
+        }
+        if (!empty($WG)) {
+            if ($WG != 'N/A') {
+                $wind[] = _t('widgets_weather.GUST','gust') . ' ' . (preg_match("/(m)/i",$this->Unit) ? $WG . ' km/h' : $this->convert_MilesMeters('', $WG) . ' mph');
+            }
+        }
 		return implode('<br />', $wind);
 	}
 	public function getDirection($fd = 0) {
@@ -219,17 +228,20 @@ class WeatherHelper {
 		if ($p == 's') {
 			$SS = ( $fd == 0 ? $this->FORECAST[$this->LocID]['SUNS'] : $this->FORECAST['DAYF'][$fd]['SUNS'] );
 		}
-		preg_match('/(\d+)(:)(\d+)\s+(\w+)/', $SS, $regs);
-		$h = $regs[1];
-		$d = $regs[2];
-		$m = $regs[3];
-		$ap = $regs[4];
-		if ($p == 's') {
-			if (!preg_match("/(en)/i", $this->Lang)) {
-				$h = $h + 12;
-			}
-		}
-		$wt = $h . $d . $m;
+        $wt = '';
+        if (!empty($SS)) {
+		    preg_match('/(\d+)(:)(\d+)\s+(\w+)/', $SS, $regs);
+		    $h = $regs[1];
+		    $d = $regs[2];
+		    $m = $regs[3];
+		    $ap = $regs[4];
+		    if ($p == 's') {
+			    if (!preg_match("/(en)/i", $this->Lang)) {
+				    $h = $h + 12;
+			    }
+		    }
+		    $wt = $h . $d . $m;
+        }
 		return $wt . ' ' . (preg_match("/(en)/i", $this->Lang) ? $ap : _t('widgets_weather.HOUR','hour'));
 	}
 	public function getConditions($fd = 0) {
