@@ -140,9 +140,9 @@ class WeatherHelper {
 		return (int) $this->FORECAST['DAYF'][$fd]['d']['PPCP'] . ' %';			
 	}
 	public function getTemp($fd = 0, $lowhigh = null) {
-		if ($lowhigh == null) {
-			$t = (int) $this->FORECAST['CC']['TMP'];
-		}
+        if ($lowhigh == null) {
+            $t = (int) ($fd == 0) ? $this->FORECAST['CC']['TMP'] : $this->FORECAST['DAYF'][$fd]['HI'];
+        }
 		if ($lowhigh == strtolower('h')) {
 			$t = (int) $this->FORECAST['DAYF'][$fd]['HI'];
 		}
